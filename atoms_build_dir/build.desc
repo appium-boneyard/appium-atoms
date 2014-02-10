@@ -39,58 +39,58 @@ js_deps(name = "deps",
 
 # Atoms created specifically for GhostDriver
 js_fragment(name = "focus_on_element",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.focusOnElement",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.focusOnElement",
   deps = [ ":deps" ])
 
 js_fragment(name = "move_mouse",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.moveMouse",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.moveMouse",
   deps = [ ":deps" ])
 
 js_fragment(name = "right_click",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.rightClick",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.rightClick",
   deps = [ ":deps" ])
 
 js_fragment(name = "double_click",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.doubleClick",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.doubleClick",
   deps = [ ":deps" ])
 
 js_fragment(name = "scroll_mouse",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.scrollMouse",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.scrollMouse",
   deps = [ ":deps" ])
 
 js_fragment(name = "drag",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.drag",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.drag",
   deps = [ ":deps" ])
 
 js_fragment(name = "scroll_into_view",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.scrollIntoView",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.scrollIntoView",
   deps = [ ":deps" ])
 
 js_fragment(name = "tap",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.tap",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.tap",
   deps = [ ":deps" ])
 
 js_fragment(name = "swipe",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.swipe",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.swipe",
   deps = [ ":deps" ])
 
 js_fragment(name = "pinch",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.pinch",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.pinch",
   deps = [ ":deps" ])
 
 js_fragment(name = "rotate",
-  module = "phantomjs.atoms.inject.action",
-  function = "phantomjs.atoms.inject.action.rotate",
+  module = "appium.atoms.inject.action",
+  function = "appium.atoms.inject.action.rotate",
   deps = [ ":deps" ])
 
 # List of Atoms that will be compiled for GhostDriver

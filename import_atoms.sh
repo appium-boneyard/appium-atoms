@@ -50,10 +50,10 @@ fi
 ################################################################################
 
 SELENIUM_REPO_PATH=$1
-DESTINATION_DIRECTORY="$PWD/../src/third_party/webdriver-atoms/"
+DESTINATION_DIRECTORY=$2
 LASTUPDATE_FILE="$DESTINATION_DIRECTORY/lastupdate"
 ATOMS_BUILD_DIR="$PWD/atoms_build_dir"
-TEMP_BUILD_DIR_NAME="phantomjs-driver"
+TEMP_BUILD_DIR_NAME="appium-atoms-driver"
 TEMP_ATOMS_BUILD_DIR_SYMLINK="$SELENIUM_REPO_PATH/javascript/$TEMP_BUILD_DIR_NAME"
 ATOMS_BUILD_TARGET="build_atoms"
 
@@ -70,7 +70,7 @@ pushd $SELENIUM_REPO_PATH
 rm $DESTINATION_DIRECTORY/*
 
 # Import only the Atoms JavaScript files
-JS_LIST="./build/javascript/atoms/fragments/*.js ./build/javascript/chrome-driver/*.js ./build/javascript/webdriver/atoms/fragments/*.js ./build/javascript/webdriver/atoms/fragments/inject/*.js ./build/javascript/phantomjs-driver/*.js"
+JS_LIST="./build/javascript/atoms/fragments/*.js ./build/javascript/chrome-driver/*.js ./build/javascript/webdriver/atoms/fragments/*.js ./build/javascript/webdriver/atoms/fragments/inject/*.js ./build/javascript/appium-atoms-driver/*.js"
 for JS in $JS_LIST
 do
     if [[ $JS != *_exports.js ]] && [[ $JS != *_ie.js ]] && [[ $JS != *build_atoms.js ]] && [[ $JS != *deps.js ]]

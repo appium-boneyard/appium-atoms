@@ -29,7 +29,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * @fileoverview Ready to inject atoms for manipulating the DOM.
  */
 
-goog.provide('phantomjs.atoms.inject.action');
+goog.provide('appium.atoms.inject.action');
 
 goog.require('bot.action');
 goog.require('bot.inject');
@@ -43,7 +43,7 @@ goog.require('webdriver.atoms.element');
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  * @see bot.action.focusOnElement
  */
-phantomjs.atoms.inject.action.focusOnElement = function(element) {
+appium.atoms.inject.action.focusOnElement = function(element) {
     return bot.inject.executeScript(bot.action.focusOnElement, [element], true);
 };
 
@@ -54,7 +54,7 @@ phantomjs.atoms.inject.action.focusOnElement = function(element) {
  * @param {!{x:number,y:number}} opt_coords Mouse position relative to the element (optional).
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  */
-phantomjs.atoms.inject.action.moveMouse = function(element, opt_coords) {
+appium.atoms.inject.action.moveMouse = function(element, opt_coords) {
     return bot.inject.executeScript(bot.action.moveMouse, [element, opt_coords], true);
 };
 
@@ -65,7 +65,7 @@ phantomjs.atoms.inject.action.moveMouse = function(element, opt_coords) {
  * @param {!{x:number,y:number}} opt_coords Mouse position relative to the element (optional).
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  */
-phantomjs.atoms.inject.action.rightClick = function(element, opt_coords) {
+appium.atoms.inject.action.rightClick = function(element, opt_coords) {
     return bot.inject.executeScript(bot.action.rightClick, [element, opt_coords], true);
 };
 
@@ -76,7 +76,7 @@ phantomjs.atoms.inject.action.rightClick = function(element, opt_coords) {
  * @param {!{x:number,y:number}} opt_coords Mouse position relative to the element (optional).
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  */
-phantomjs.atoms.inject.action.doubleClick = function(element, opt_coords) {
+appium.atoms.inject.action.doubleClick = function(element, opt_coords) {
     return bot.inject.executeScript(bot.action.doubleClick, [element, opt_coords], true);
 };
 
@@ -89,7 +89,7 @@ phantomjs.atoms.inject.action.doubleClick = function(element, opt_coords) {
  * @param {!{x:number,y:number}} opt_coords Mouse position relative to the element (optional).
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  */
-phantomjs.atoms.inject.action.scrollMouse = function(element, ticks, opt_coords) {
+appium.atoms.inject.action.scrollMouse = function(element, ticks, opt_coords) {
     return bot.inject.executeScript(bot.action.scrollMouse, [element, ticks, opt_coords], true);
 };
 
@@ -102,7 +102,7 @@ phantomjs.atoms.inject.action.scrollMouse = function(element, ticks, opt_coords)
  * @param {!{x:number,y:number}} opt_coords Drag start position relative to the element.
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  */
-phantomjs.atoms.inject.action.drag = function(element, dx, dy, opt_coords) {
+appium.atoms.inject.action.drag = function(element, dx, dy, opt_coords) {
     return bot.inject.executeScript(bot.action.drag, [element, dx, dy, opt_coords], true);
 };
 
@@ -116,7 +116,7 @@ phantomjs.atoms.inject.action.drag = function(element, dx, dy, opt_coords) {
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject};
  *     whether the element is in view after scrolling.
  */
-phantomjs.atoms.inject.action.scrollIntoView = function(element, opt_coords) {
+appium.atoms.inject.action.scrollIntoView = function(element, opt_coords) {
     return bot.inject.executeScript(bot.action.scrollIntoView, [element, opt_coords], true);
 };
 
@@ -127,7 +127,7 @@ phantomjs.atoms.inject.action.scrollIntoView = function(element, opt_coords) {
  * @param {!{x:number,y:number}} opt_coords Finger position relative to the target.
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  */
-phantomjs.atoms.inject.action.tap = function(element, opt_coords) {
+appium.atoms.inject.action.tap = function(element, opt_coords) {
     return bot.inject.executeScript(bot.action.tap, [element, opt_coords], true);
 };
 
@@ -140,7 +140,7 @@ phantomjs.atoms.inject.action.tap = function(element, opt_coords) {
  * @param {!{x:number,y:number}} opt_coords Swipe start position relative to the element.
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  */
-phantomjs.atoms.inject.action.swipe = function(element, dx, dy, opt_coords) {
+appium.atoms.inject.action.swipe = function(element, dx, dy, opt_coords) {
     return bot.inject.executeScript(bot.action.swipe, [element, dx, dy, opt_coords], true);
 };
 
@@ -156,7 +156,7 @@ phantomjs.atoms.inject.action.swipe = function(element, dx, dy, opt_coords) {
  * @param {!{x:number,y:number}} opt_coords Position relative to the element at the center of the pinch.
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  */
-phantomjs.atoms.inject.action.pinch = function(element, distance, opt_coords) {
+appium.atoms.inject.action.pinch = function(element, distance, opt_coords) {
     return bot.inject.executeScript(bot.action.pinch, [element, distance, opt_coords], true);
 };
 
@@ -171,6 +171,6 @@ phantomjs.atoms.inject.action.pinch = function(element, distance, opt_coords) {
  * @param {!{x:number,y:number}} opt_coords Position relative to the element at the center of the rotation.
  * @return {(string|{status: bot.ErrorCode.<number>, value: *})} A stringified {@link bot.response.ResponseObject}.
  */
-phantomjs.atoms.inject.action.rotate = function(element, angle, opt_coords) {
+appium.atoms.inject.action.rotate = function(element, angle, opt_coords) {
     return bot.inject.executeScript(bot.action.rotate, [element, angle, opt_coords], true);
 };
