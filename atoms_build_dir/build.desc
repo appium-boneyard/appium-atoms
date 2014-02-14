@@ -3,6 +3,11 @@ js_deps(name = "deps",
   deps = ["//javascript/atoms:deps",
           "//javascript/webdriver/atoms:deps"])
 
+js_fragment(name = "get_element_from_cache",
+  module = "bot.inject.cache",
+  function = "bot.inject.cache.getElement",
+  deps = [ "//javascript/atoms:deps" ])
+
 js_fragment(name = "move_mouse",
   module = "appium.atoms.inject.action",
   function = "appium.atoms.inject.action.moveMouse",
@@ -13,7 +18,6 @@ js_fragment(name = "tap",
   function = "appium.atoms.inject.action.tap",
   deps = [ ":deps" ])
 
-# List of Atoms that will be compiled for GhostDriver
 js_deps(name = "build_atoms",
   deps = [
     "//javascript/webdriver/atoms/fragments/inject:active_element",
@@ -22,9 +26,11 @@ js_deps(name = "build_atoms",
     "//javascript/atoms/fragments:execute_async_script",
     "//javascript/atoms/fragments:execute_script",
     "//javascript/webdriver/atoms/fragments/inject:find_element",
+    "//javascript/webdriver/atoms/fragments/inject:find_elements",
     "//javascript/webdriver/atoms/fragments/inject:frame_by_id_or_name",
     "//javascript/webdriver/atoms/fragments/inject:frame_by_index",
     "//javascript/webdriver/atoms/fragments/inject:get_attribute_value",
+    ":get_element_from_cache",
     "//javascript/webdriver/atoms/fragments/inject:get_frame_window",
     "//javascript/webdriver/atoms/fragments/inject:get_size",
     "//javascript/webdriver/atoms/fragments/inject:get_text",
