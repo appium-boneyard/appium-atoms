@@ -1,6 +1,6 @@
 {
   "name": "appium-atoms",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Appium safari atoms",
   "main": "lib/main.js",
   "scripts": {
