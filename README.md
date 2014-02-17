@@ -8,3 +8,9 @@ and adapted to Appium.
 ## usage
 
 `make`
+
+## publish
+
+npm version [patch|minor|major]
+git push --tags origin master
+npm publish
