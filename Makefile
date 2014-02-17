@@ -9,10 +9,10 @@ clone_selenium:
 	cd tmp/selenium && git checkout selenium-2.39.0
 
 atoms:
-	rm -rf lib/atoms
+	rm -rf atoms
 	cd tmp/selenium && ./go clean
-	mkdir -p lib/atoms
-	minify=true ./import_atoms.sh $(current_dir)/tmp/selenium $(current_dir)/lib/atoms
+	mkdir atoms
+	minify=true ./import_atoms.sh $(current_dir)/tmp/selenium $(current_dir)/atoms
 
 .PHONY: \
 	DEFAULT \

@@ -1,0 +1,19 @@
+{
+  "name": "appium-atoms",
+  "version": "0.0.0",
+  "description": "Appium safari atoms",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/appium-atoms.git"
+  },
+  "author": "",
+  "license": "LICENCES",
+  "bugs": {
+    "url": "https://github.com/appium/appium-atoms/issues"
+  },
+  "homepage": "https://github.com/appium/appium-atoms"
+}
