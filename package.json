@@ -1,6 +1,6 @@
 {
   "name": "appium-atoms",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Appium safari atoms",
   "main": "lib/main.js",
   "scripts": {
@@ -13,8 +13,8 @@
   "author": "",
   "licenses": [
     {
-        "type" : "apache-2.0",
-        "url" : "https://github.com/appium/appium-adb/blob/master/LICENSE"
+      "type": "apache-2.0",
+      "url": "https://github.com/appium/appium-adb/blob/master/LICENSE"
     }
   ],
   "bugs": {
