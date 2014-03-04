@@ -11,7 +11,12 @@
     "url": "https://github.com/appium/appium-atoms.git"
   },
   "author": "",
-  "license": "LICENCES",
+  "licenses": [
+    {
+        "type" : "apache-2.0",
+        "url" : "https://github.com/appium/appium-adb/blob/master/LICENSE"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/appium/appium-atoms/issues"
   },
