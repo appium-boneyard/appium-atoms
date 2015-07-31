@@ -1,7 +1,7 @@
-2014-02-17 15:05:58
+2015-07-31 17:11:41
 
-commit 14fa800511cc5d66d426e08b0b2ab926c7ed7398 (HEAD, tag: refs/tags/selenium-2.39.0)
+commit 4d972c01cab1304452627f837654326a11eb92fe (grafted, HEAD, tag: refs/tags/selenium-2.47.1)
 Author: Jim Evans <james.h.evans.jr@gmail.com>
-Date:   Mon Dec 16 11:26:02 2013 -0500
+Date:   Wed Jul 29 23:04:58 2015 -0400
 
-    Updating .NET CHANGELOG for 2.39.0 release
+    Bumping version number for Java 2.47.1 release
