@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 usage() {
     echo ""
@@ -7,7 +8,7 @@ usage() {
     echo ""
 }
 
-if [[ $# < 1 ]]
+if [[ $# -lt 1 ]]
 then
     usage
     exit
@@ -23,17 +24,16 @@ TEMP_BUILD_DIR_NAME="appium-atoms-driver"
 TEMP_ATOMS_BUILD_DIR_SYMLINK="$SELENIUM_REPO_PATH/javascript/$TEMP_BUILD_DIR_NAME"
 ATOMS_BUILD_TARGET="build_atoms"
 
-
 # 1. Inject build file into CrazyFunBuild used by Selenium
-ln -s $ATOMS_BUILD_DIR $TEMP_ATOMS_BUILD_DIR_SYMLINK
+ln -s "$ATOMS_BUILD_DIR" "$TEMP_ATOMS_BUILD_DIR_SYMLINK"
 
 # 2. Build the JS Fragments
-pushd $SELENIUM_REPO_PATH
+pushd "$SELENIUM_REPO_PATH"
 # Build all the Atoms
 ./go //javascript/$TEMP_BUILD_DIR_NAME:$ATOMS_BUILD_TARGET
 
 # Before importing, delete the previous atoms
-rm -rf $DESTINATION_DIRECTORY/*
+rm -rf "${DESTINATION_DIRECTORY:?}/*"
 
 # Import only the Atoms JavaScript files
 JS_LIST="./build/javascript/atoms/fragments/*.js ./build/javascript/chrome-driver/*.js ./build/javascript/webdriver/atoms/fragments/*.js ./build/javascript/webdriver/atoms/fragments/inject/*.js ./build/javascript/appium-atoms-driver/*.js"
@@ -42,17 +42,17 @@ do
     if [[ $JS != *_exports.js ]] && [[ $JS != *_ie.js ]] && [[ $JS != *build_atoms.js ]] && [[ $JS != *deps.js ]]
     then
         echo "Importing Atom: $JS"
-        cp $JS $DESTINATION_DIRECTORY
+        cp "$JS" "$DESTINATION_DIRECTORY"
     fi
 done
 
 # Save the current timestamp to remember when this was generated
-date +"%Y-%m-%d %H:%M:%S" > $LASTUPDATE_FILE
-echo "" >> $LASTUPDATE_FILE
-git log -n 1 --decorate=full >> $LASTUPDATE_FILE
+date +"%Y-%m-%d %H:%M:%S" > "$LASTUPDATE_FILE"
+echo "" >> "$LASTUPDATE_FILE"
+git log -n 1 --decorate=full >> "$LASTUPDATE_FILE"
 
 popd
 
 # 3. Eject build file from CrazyFunBuild and clear the "/build" directory
-rm "$TEMP_ATOMS_BUILD_DIR_SYMLINK"
-rm -rf "$SELENIUM_REPO_PATH/build"
+rm "${TEMP_ATOMS_BUILD_DIR_SYMLINK:?}"
+rm -rf "${SELENIUM_REPO_PATH:?}/build"
