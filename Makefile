@@ -5,8 +5,7 @@ DEFAULT: clone_selenium atoms
 clone_selenium:
 	mkdir -p tmp
 	rm -rf tmp/selenium
-	git clone https://code.google.com/p/selenium tmp/selenium
-	cd tmp/selenium && git checkout selenium-2.39.0
+	git clone --branch=selenium-2.47.1 --depth=1 https://github.com/SeleniumHQ/selenium.git tmp/selenium
 
 atoms:
 	rm -rf atoms

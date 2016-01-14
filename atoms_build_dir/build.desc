@@ -1,7 +1,9 @@
-js_deps(name = "deps",
-  srcs = "*.js",
-  deps = ["//javascript/atoms:deps",
-          "//javascript/webdriver/atoms:deps"])
+js_library(name = "deps",
+  srcs = [ "*.js" ],
+  deps = [
+    "//javascript/atoms:all_js",
+    "//javascript/webdriver/atoms:all_js",
+  ])
 
 js_fragment(name = "element_equals_element",
   module = "appium.atoms.inject.action",
@@ -16,7 +18,7 @@ js_fragment(name = "fireEvent",
 js_fragment(name = "get_element_from_cache",
   module = "bot.inject.cache",
   function = "bot.inject.cache.getElement",
-  deps = [ "//javascript/atoms:deps" ])
+  deps = [ ":deps" ])
 
 js_fragment(name = "move_mouse",
   module = "appium.atoms.inject.action",
@@ -38,7 +40,7 @@ js_fragment(name = "title",
   function = "appium.atoms.inject.action.title",
   deps = [ ":deps" ])
 
-js_deps(name = "build_atoms",
+js_library(name = "build_atoms",
   deps = [
     "//javascript/webdriver/atoms/fragments/inject:active_element",
     "//javascript/webdriver/atoms/fragments/inject:clear",
