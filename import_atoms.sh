@@ -41,8 +41,13 @@ for JS in $JS_LIST
 do
     if [[ $JS != *_exports.js ]] && [[ $JS != *_ie.js ]] && [[ $JS != *build_atoms.js ]] && [[ $JS != *deps.js ]]
     then
-        echo "Importing Atom: $JS"
-        cp "$JS" "$DESTINATION_DIRECTORY"
+        if [ -e "$JS" ]
+        then
+            echo "Importing Atom: $JS"
+            cp "$JS" "$DESTINATION_DIRECTORY"
+        else
+            echo "Source does not exist: $JS"
+        fi
     fi
 done
 
