@@ -1,7 +1,7 @@
-2015-07-31 17:11:41
+2016-01-14 10:23:38
 
-commit 4d972c01cab1304452627f837654326a11eb92fe (grafted, HEAD, tag: refs/tags/selenium-2.47.1)
-Author: Jim Evans <james.h.evans.jr@gmail.com>
-Date:   Wed Jul 29 23:04:58 2015 -0400
+commit 365eeb44deba2067b1761c8862ef21d55250e063 (grafted, HEAD, tag: refs/tags/selenium-2.49.0)
+Author: AutomatedTester <david.burns@theautomatedtester.co.uk>
+Date:   Wed Jan 13 18:27:24 2016 +0000
 
-    Bumping version number for Java 2.47.1 release
+    Bump Java to 2.49.0 and update Changelog
