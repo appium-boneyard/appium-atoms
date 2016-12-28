@@ -1,18 +1,3 @@
-# Appium Atoms
+## Appium Atoms [deprecated]
 
-## Credit
-
-This was extracted from the [detro/ghostdriver](https://github.com/detro/ghostdriver) project 
-and adapted to Appium.
-
-## usage
-
-`make`
-
-## publish
-
-```
-npm version [patch|minor|major]
-git push --tags origin master
-npm publish
-```
+This package has been moved into [appium-remote-debugger](https://github.com/appium/appium-remote-debugger).
